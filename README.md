@@ -13,6 +13,7 @@ as an external disk image.
 ```terminal
 $ git clone https://github.com/mattt/commoditize.git
 $ cd commoditize
+$ brew bundle
 $ make install
 ```
 
