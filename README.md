@@ -23,6 +23,9 @@ $ make install
 $ commoditize docker://ghcr.io/homebrew/core/syncthing:1.16.1
 ```
 
+<img width="1118" alt="Example disk image mounted with commoditize on macOS Big Sur" src="https://user-images.githubusercontent.com/7659/118305159-71ad1b00-b49c-11eb-9280-bb16011229e5.png">
+
+
 ## License
 
 MIT
