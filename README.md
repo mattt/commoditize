@@ -6,7 +6,7 @@ as an external disk image.
 ## Requirements
 
 - macOS 10.0+
-- skopeo
+- [skopeo](https://github.com/containers/skopeo)
 
 ## Installation
 
