@@ -14,6 +14,7 @@ commoditize: $(srcdir)/commoditize.bash
 .PHONY: check
 check: commoditize
 	@bash -n $<
+	@bash tests/copy-options.bash
 
 .PHONY: install
 install: commoditize
