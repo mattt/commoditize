@@ -37,6 +37,7 @@ function volname_from_uri {
 }
 
 uri="$1"
+shift
 tmpdir=$(mktemp -d)
 checksum=$(echo "$uri" | shasum -a 256 | cut -d' ' -f 1)
 volname=$(volname_from_uri "$uri")
@@ -46,7 +47,7 @@ function cleanup {
 }
 trap cleanup EXIT
 
-skopeo copy "$uri" dir:"$tmpdir/contents"
+skopeo copy "$@" "$uri" dir:"$tmpdir/contents"
 hdiutil create -srcfolder "$tmpdir/contents" "$tmpdir/$checksum.dmg" -volname "$volname"
 hdiutil attach "$tmpdir/$checksum.dmg"
 open -a "Finder" "/Volumes/$(echo "$volname" | tr '/' ':')"
